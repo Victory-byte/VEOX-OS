@@ -1,0 +1,4 @@
+learn rust
+build github project
+learn rust
+build cli tool

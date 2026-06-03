@@ -1,0 +1,19 @@
+# Rust build files
+/target/
+
+# Cargo lock (optional for apps)
+Cargo.lock
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
