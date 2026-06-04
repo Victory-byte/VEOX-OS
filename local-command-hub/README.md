@@ -95,20 +95,30 @@ Requires Rust stable.Install via:https://rustup.rs (https://rustup.rs/)
 Add to memory
 
 hub add fix login bug        #urgent
+
 hub add build new feature    #idea
+
 hub add study rust ownership #study
+
 
 ## Query memory
 
 
 hub view           # full memory dump
+
 hub search rust    # keyword search
+
 
 ## Run cognitive analysis
 
 
-hub view           # full memory dump
-hub search rust    # keyword search
+hub summary        # high-level state overview
+
+hub reflect        # deep reflection on past behavior
+
+hub state          # current cognitive pulse
+
+hub compress       # prune noise, consolidate memory
 
 ## Exit 
 
