@@ -1,152 +1,123 @@
-# VEOX-OS
+<div align="center">
+██╗   ██╗███████╗ ██████╗ ██╗  ██╗      ██████╗ ███████╗
+██║   ██║██╔════╝██╔═══██╗╚██╗██╔╝     ██╔═══██╗██╔════╝
+██║   ██║█████╗  ██║   ██║ ╚███╔╝      ██║   ██║███████╗
+╚██╗ ██╔╝██╔══╝  ██║   ██║ ██╔██╗      ██║   ██║╚════██║
+ ╚████╔╝ ███████╗╚██████╔╝██╔╝ ██╗     ╚██████╔╝███████║
+  ╚═══╝  ╚══════╝ ╚═════╝ ╚═╝  ╚═╝      ╚═════╝ ╚══════╝
 
-Autonomous cognition in Rust  
-Simulating memory, reflection, and prediction through layered cognitive engines
+Autonomous cognition in Rust.  
+Memory. Reflection. Prediction. Running in your terminal.
 
-## SYSTEM PREVIEW
+[![Built with Rust](https://img.shields.io/badge/built%20with-Rust-orange?style=flat-square&logo=rust)](https://www.rust-lang.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
+[![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)]()
 
-![VEOX Banner](veox-png)
+</div>
 
-## WHY I BUILT THIS
+---
 
-I built VEOX-OS to explore how autonomous cognitive systems can be modeled through low-level systems programming.
+## What is VEOX-OS?
 
-The project experiments with memory simulation, reflective processing, prediction layers, and behavioral analysis inside a terminal-based architecture written entirely in Rust.
+Most "AI" tools are just wrappers. VEOX-OS is something different.
 
-My goal is to understand how intelligent systems can emerge from layered internal processes rather than fixed scripted behavior.
+It's a terminal-based cognitive system written entirely in Rust — built to simulate how an intelligent system might actually think: storing memory, reflecting on past behavior, predicting future actions, and evolving its own internal state over time.
 
-## TECH STACK
+No LLM calls. No API keys. No cloud dependency.  
+Just a cognitive engine, running locally, getting smarter the more you use it.
 
-Rust  
-CLI-based architecture  
-File-based memory system (brain.db)  
-Event-driven processing loops  
-Modular cognitive engine design  
+---
 
-## INSTALLATION
+## Demo
 
-Clone the repository:
+<p align="center">
+  <img src="veox-demo.gif" width="100%" />
+</p>
+COGNITIVE STATE REPORT
+─────────────────────────────────
+  Total memory items : 12
+  Urgent tasks       : 3
+  Ideas in queue     : 5
+  Study nodes        : 4
+─────────────────────────────────
+  Cognitive Pulse    : CREATIVE MODE ACTIVE
+  Last evolved       : 2 cycles ago
+─────────────────────────────────
+  → Suggestion: You've been adding ideas but closing no tasks. Refocus?
 
+---
+
+## Architecture
+
+VEOX-OS is built as a layered cognitive pipeline. Each layer has one job.
+┌─────────────────────────────────────────────────────────┐
+│  INPUT LAYER        hub commands → structured intent    │
+├─────────────────────────────────────────────────────────┤
+│  MEMORY SYSTEM      brain.db · tasks · ideas · history  │
+├──────────────────────┬──────────────────────────────────┤
+│  COGNITIVE PIPELINE  │                                  │
+│                      │  Reflection  → reads the past   │
+│                      │  Prediction  → anticipates next │
+│                      │  Attention   → surfaces signals  │
+│                      │  Suggestion  → proposes actions  │
+│                      │  Compression → strips the noise  │
+│                      │  Evolution   → adapts over time  │
+├──────────────────────┴──────────────────────────────────┤
+│  AUTONOMOUS LOOP    background scan every 10s           │
+│                     pattern detection · state mutation  │
+├─────────────────────────────────────────────────────────┤
+│  OUTPUT LAYER       cognitive reports · state changes   │
+└─────────────────────────────────────────────────────────┘
+
+The autonomous loop is what makes VEOX-OS feel alive — it continuously scans memory, detects behavioral patterns, and evolves system state without you asking it to.
+
+---
+
+## Quick Start
+# Clone
 git clone https://github.com/Victory-byte/VEOX-OS.git
-
-Enter project folder:
-
 cd VEOX-OS
 
-Build project:
-
+# Build & run
 cargo build
-
-Run project:
-
 cargo run
 
-## USAGE
+> Requires Rust stable. Install via [rustup.rs](https://rustup.rs).
 
-Add memory:
+---
 
-hub add fix login bug #urgent  
-hub add build new idea #idea  
-hub add study rust ownership #study  
+## Usage
 
-View memory:
+Add to memory
+hub add fix login bug        #urgent
+hub add build new feature    #idea
+hub add study rust ownership #study
 
-hub view
+Query memory
+hub view           # full memory dump
+hub search rust    # keyword search
 
-Search memory:
+Run cognitive analysis
+hub summary        # high-level state overview
+hub reflect        # deep reflection on past behavior
+hub state          # current cognitive pulse
+hub compress       # prune noise, consolidate memory
 
-hub search rust
-
-System analysis:
-
-hub summary  
-hub reflect  
-hub state  
-hub compress  
-
-Exit system:
-
+Exit
 hub exit
 
-## SYSTEM ARCHITECTURE
+---
 
-VEOX-OS Cognitive Engine Design
+## Tech Stack
 
-┌──────────────────────────────────────────────┐
-│                USER INPUT                    │
-│  hub commands, queries, memory actions       │
-└──────────────────────────────────────────────┘
-                     ↓
-┌──────────────────────────────────────────────┐
-│            COMMAND INTERPRETER               │
-│  parses input into structured instructions    │
-└──────────────────────────────────────────────┘
-                     ↓
-┌──────────────────────────────────────────────┐
-│             MEMORY SYSTEM                    │
-│  brain.db persistent storage layer           │
-│  stores: tasks, ideas, behaviors, history    │
-└──────────────────────────────────────────────┘
-                     ↓
-┌──────────────────────────────────────────────┐
-│            COGNITIVE PIPELINE               │
-│                                              │
-│   Reflection Engine                          │
-│   → analyzes past memory and context         │
-│                                              │
-│   Prediction Engine                          │
-│   → forecasts next likely actions/needs      │
-│                                              │
-│   Attention Layer                           │
-│   → prioritizes important signals            │
-│                                              │
-│   Suggestion System                         │
-│   → generates intelligent next actions       │
-│                                              │
-│   Compression Engine                        │
-│   → removes noise, summarizes memory         │
-│                                              │
-│   Evolution Engine                          │
-│   → adapts system behavior over time         │
-└──────────────────────────────────────────────┘
-                     ↓
-┌──────────────────────────────────────────────┐
-│         AUTONOMOUS EXECUTION LAYER           │
-│  background loop running continuous analysis │
-│  scans memory, detects patterns, evolves     │
-└──────────────────────────────────────────────┘
-                     ↓
-┌──────────────────────────────────────────────┐
-│              SYSTEM OUTPUT                   │
-│  cognitive reports, insights, state changes  │
-└──────────────────────────────────────────────┘
+| Layer | Tech |
+|---|---|
+| Language | Rust (stable) |
+| Interface | CLI — zero UI overhead |
+| Storage | File-based · brain.db |
+| Processing | Event-driven loops |
+| Design | Modular cognitive engine |
 
-## AUTONOMOUS ENGINE
+---
 
-VEOX-OS runs a background cognitive loop that continuously:
-
-Scans memory every 10 seconds  
-Analyzes cognitive state  
-Detects behavioral patterns  
-Generates autonomous insights  
-Evolves system state dynamically  
-
-This gives VEOX-OS its simulated alive system behavior
-
-## EXAMPLE OUTPUT
-
-COGNITIVE STATE REPORT  
-Total memory items: 12  
-Urgent tasks: 3  
-Idea items: 5  
-Study items: 4  
-Cognitive Pulse: CREATIVE MODE ACTIVE  
-
-## CURRENT PHASE
-
-Phase 14 Cognitive Evolution Architecture
-
-Implemented systems include:
-
-Reflection Engine  
-Prediction Engine
+## Why I Built This
