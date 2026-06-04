@@ -1,4 +1,6 @@
-<div align="center">
+<p align="center">
+<pre>
+
 ██╗   ██╗███████╗ ██████╗ ██╗  ██╗      ██████╗ ███████╗
 ██║   ██║██╔════╝██╔═══██╗╚██╗██╔╝     ██╔═══██╗██╔════╝
 ██║   ██║█████╗  ██║   ██║ ╚███╔╝      ██║   ██║███████╗
@@ -6,16 +8,18 @@
  ╚████╔╝ ███████╗╚██████╔╝██╔╝ ██╗     ╚██████╔╝███████║
   ╚═══╝  ╚══════╝ ╚═════╝ ╚═╝  ╚═╝      ╚═════╝ ╚══════╝
 
-Autonomous cognition in Rust.  
-Memory. Reflection. Prediction. Running in your terminal.
+
+Autonomous cognition in Rust.
+
 
 [![Built with Rust](https://img.shields.io/badge/built%20with-Rust-orange?style=flat-square&logo=rust)](https://www.rust-lang.org/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 [![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)]()
 
-</div>
+</pre >
+<\p>
 
 ---
+
 
 ## What is VEOX-OS?
 
@@ -30,9 +34,7 @@ Just a cognitive engine, running locally, getting smarter the more you use it.
 
 ## Demo
 
-<p align="center">
-  <img src="veox-demo.gif" width="100%" />
-</p>
+> *Add a terminal GIF here — highly recommended. Tools: [vhs](https://github.com/charmbracelet/vhs), [asciinema](https://asciinema.org/)*
 COGNITIVE STATE REPORT
 ─────────────────────────────────
   Total memory items : 12
@@ -50,6 +52,10 @@ COGNITIVE STATE REPORT
 ## Architecture
 
 VEOX-OS is built as a layered cognitive pipeline. Each layer has one job.
+
+
+<pre>
+
 ┌─────────────────────────────────────────────────────────┐
 │  INPUT LAYER        hub commands → structured intent    │
 ├─────────────────────────────────────────────────────────┤
@@ -59,9 +65,9 @@ VEOX-OS is built as a layered cognitive pipeline. Each layer has one job.
 │                      │  Reflection  → reads the past   │
 │                      │  Prediction  → anticipates next │
 │                      │  Attention   → surfaces signals  │
-│                      │  Suggestion  → proposes actions  │
-│                      │  Compression → strips the noise  │
-│                      │  Evolution   → adapts over time  │
+│                      │  Suggestion   → proposes actions │
+│                      │  Compression  → strips the noise │
+│                      │  Evolution    → adapts over time │
 ├──────────────────────┴──────────────────────────────────┤
 │  AUTONOMOUS LOOP    background scan every 10s           │
 │                     pattern detection · state mutation  │
@@ -69,11 +75,16 @@ VEOX-OS is built as a layered cognitive pipeline. Each layer has one job.
 │  OUTPUT LAYER       cognitive reports · state changes   │
 └─────────────────────────────────────────────────────────┘
 
-The autonomous loop is what makes VEOX-OS feel alive — it continuously scans memory, detects behavioral patterns, and evolves system state without you asking it to.
+</pre>
+
+
+The autonomous loop is what makes VEOX-OS feel **alive** it continuously scans memory,detects behavioral patterns and evolves system state without you asking it to.
 
 ---
 
 ## Quick Start
+
+```bash
 # Clone
 git clone https://github.com/Victory-byte/VEOX-OS.git
 cd VEOX-OS
@@ -85,6 +96,7 @@ cargo run
 > Requires Rust stable. Install via [rustup.rs](https://rustup.rs).
 
 ---
+
 
 ## Usage
 
@@ -120,4 +132,36 @@ hub exit
 
 ---
 
+
+
 ## Why I Built This
+
+I wanted to understand how intelligent behavior can emerge from layered internal processes — without relying on pre-trained models or external APIs.
+
+VEOX-OS is the result: a system that builds a model of your behavior from the ground up, evolves it continuously, and surfaces insights you didn't explicitly ask for. It's less a productivity tool and more a study in how cognition itself might be engineered.
+
+The constraint of building it in Rust — low-level, no garbage collector, brutal about memory safety — forced every design decision to be intentional. That tension is part of the point.
+
+---
+
+## Roadmap
+
+- [x] Reflection Engine
+- [x] Prediction Engine  
+- [x] Attention Layer
+- [x] Suggestion System
+- [x] Compression Engine
+- [x] Evolution Engine
+- [x] Autonomous background loop
+- [ ] Persistent cross-session behavioral modeling
+- [ ] Exportable cognitive reports (JSON / Markdown)
+- [ ] Plugin interface for custom cognitive modules
+
+---
+
+
+div align="center">
+
+*Built in Rust. Runs in your terminal. Thinks on its own.*
+
+</div>
