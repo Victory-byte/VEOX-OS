@@ -16,7 +16,6 @@ Autonomous cognition in Rust.
 [![Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)]()
 
 </pre >
-<\p>
 
 ---
 
@@ -25,34 +24,25 @@ Autonomous cognition in Rust.
 
 Most "AI" tools are just wrappers. VEOX-OS is something different.
 
-It's a terminal-based cognitive system written entirely in Rust — built to simulate how an intelligent system might actually think: storing memory, reflecting on past behavior, predicting future actions, and evolving its own internal state over time.
+It's a terminal-based cognitive system written entirely in Rust built to simulate how an intelligent system might actually think:storing memory,reflecting on past behavior,predicting future actions and evolving its own internal state over time.
 
-No LLM calls. No API keys. No cloud dependency.  
-Just a cognitive engine, running locally, getting smarter the more you use it.
+No LLM calls. No API keys.No cloud dependency.  
+Just a cognitive engine,running locally,getting smarter the more you use it.
 
 ---
 
 ## Demo
 
-> *Add a terminal GIF here — highly recommended. Tools: [vhs](https://github.com/charmbracelet/vhs), [asciinema](https://asciinema.org/)*
-COGNITIVE STATE REPORT
-─────────────────────────────────
-  Total memory items : 12
-  Urgent tasks       : 3
-  Ideas in queue     : 5
-  Study nodes        : 4
-─────────────────────────────────
-  Cognitive Pulse    : CREATIVE MODE ACTIVE
-  Last evolved       : 2 cycles ago
-─────────────────────────────────
-  → Suggestion: You've been adding ideas but closing no tasks. Refocus?
+<p align="center">
+  <img src="veox-demo.gif" width="100%" />
+</p>
+
 
 ---
 
 ## Architecture
 
-VEOX-OS is built as a layered cognitive pipeline. Each layer has one job.
-
+VEOX-OS is built as a layered cognitive pipeline.Each layer has one job.
 
 <pre>
 
@@ -80,88 +70,81 @@ VEOX-OS is built as a layered cognitive pipeline. Each layer has one job.
 
 The autonomous loop is what makes VEOX-OS feel **alive** it continuously scans memory,detects behavioral patterns and evolves system state without you asking it to.
 
----
 
-## Quick Start
 
-```bash
+## Quick Start 
+
 # Clone
 git clone https://github.com/Victory-byte/VEOX-OS.git
-cd VEOX-OS
+cd local-command-hub
 
 # Build & run
 cargo build
 cargo run
 
-> Requires Rust stable. Install via [rustup.rs](https://rustup.rs).
-
----
+Requires Rust stable.Install via:https://rustup.rs (https://rustup.rs/)
 
 
 ## Usage
 
 Add to memory
+
 hub add fix login bug        #urgent
 hub add build new feature    #idea
 hub add study rust ownership #study
 
 Query memory
+
+
 hub view           # full memory dump
 hub search rust    # keyword search
 
 Run cognitive analysis
+
+
 hub summary        # high-level state overview
 hub reflect        # deep reflection on past behavior
 hub state          # current cognitive pulse
 hub compress       # prune noise, consolidate memory
 
 Exit
+
 hub exit
 
----
+
 
 ## Tech Stack
 
-| Layer | Tech |
-|---|---|
-| Language | Rust (stable) |
-| Interface | CLI — zero UI overhead |
-| Storage | File-based · brain.db |
-| Processing | Event-driven loops |
-| Design | Modular cognitive engine |
-
----
+Rust (stable systems programming language)  
+CLI-native architecture  
+Persistent file-based memory system (brain.db)  
+Event-driven processing engine  
+Modular cognitive engine design  
+Layered autonomous reasoning system (memory, reflection, prediction, evolution)
 
 
 
 ## Why I Built This
 
-I wanted to understand how intelligent behavior can emerge from layered internal processes — without relying on pre-trained models or external APIs.
+I wanted to understand how intelligent behavior can emerge from layered internal processes without relying on pre-trained models or external APIs.
+VEOX-OS is the result:a system that builds a model of your behavior from the ground up, evolves it continuously, and surfaces insights you didn’t explicitly ask for. It’s less a productivity tool and more a study in how cognition itself might be engineered.
+The constraint of building it in Rust low-level, no garbage collector, brutal about memory safety forced every design decision to be intentional. That tension is part of the point.
 
-VEOX-OS is the result: a system that builds a model of your behavior from the ground up, evolves it continuously, and surfaces insights you didn't explicitly ask for. It's less a productivity tool and more a study in how cognition itself might be engineered.
 
-The constraint of building it in Rust — low-level, no garbage collector, brutal about memory safety — forced every design decision to be intentional. That tension is part of the point.
-
----
 
 ## Roadmap
 
-- [x] Reflection Engine
-- [x] Prediction Engine  
-- [x] Attention Layer
-- [x] Suggestion System
-- [x] Compression Engine
-- [x] Evolution Engine
-- [x] Autonomous background loop
-- [ ] Persistent cross-session behavioral modeling
-- [ ] Exportable cognitive reports (JSON / Markdown)
-- [ ] Plugin interface for custom cognitive modules
-
----
+ • Reflection Engine
+ • Prediction Engine
+ • Attention Layer
+ • Suggestion System
+ • Compression Engine
+ • Evolution Engine
+ • Autonomous background loop
+ • Persistent cross-session behavioral modeling
+ • Exportable cognitive reports (JSON / Markdown)
+ • Plugin interface for custom cognitive modules
 
 
-div align="center">
 
-*Built in Rust. Runs in your terminal. Thinks on its own.*
-
-</div>
+Built in Rust. Runs in your terminal. Thinks on its own.
