@@ -22,11 +22,11 @@ Autonomous cognition in Rust.
 
 ## What is VEOX-OS?
 
-Most "AI" tools are just wrappers. VEOX-OS is something different.
+Most "AI" tools are just wrappers.VEOX-OS is something different.
 
 It's a terminal-based cognitive system written entirely in Rust built to simulate how an intelligent system might actually think:storing memory,reflecting on past behavior,predicting future actions and evolving its own internal state over time.
 
-No LLM calls. No API keys.No cloud dependency.  
+No LLM calls.No API keys.No cloud dependency.  
 Just a cognitive engine,running locally,getting smarter the more you use it.
 
 ---
@@ -74,13 +74,18 @@ The autonomous loop is what makes VEOX-OS feel **alive** it continuously scans m
 
 ## Quick Start 
 
-# Clone
+Clone
+
 git clone https://github.com/Victory-byte/VEOX-OS.git
+
 cd local-command-hub
 
-# Build & run
+
+Build & run
+
 cargo build
 cargo run
+
 
 Requires Rust stable.Install via:https://rustup.rs (https://rustup.rs/)
 
@@ -93,23 +98,22 @@ hub add fix login bug        #urgent
 hub add build new feature    #idea
 hub add study rust ownership #study
 
-Query memory
+## Query memory
 
 
 hub view           # full memory dump
 hub search rust    # keyword search
 
-Run cognitive analysis
+## Run cognitive analysis
 
 
-hub summary        # high-level state overview
-hub reflect        # deep reflection on past behavior
-hub state          # current cognitive pulse
-hub compress       # prune noise, consolidate memory
+hub view           # full memory dump
+hub search rust    # keyword search
 
-Exit
+## Exit 
 
 hub exit
+
 
 
 
@@ -128,7 +132,7 @@ Layered autonomous reasoning system (memory, reflection, prediction, evolution)
 
 I wanted to understand how intelligent behavior can emerge from layered internal processes without relying on pre-trained models or external APIs.
 VEOX-OS is the result:a system that builds a model of your behavior from the ground up, evolves it continuously, and surfaces insights you didn’t explicitly ask for. It’s less a productivity tool and more a study in how cognition itself might be engineered.
-The constraint of building it in Rust low-level, no garbage collector, brutal about memory safety forced every design decision to be intentional. That tension is part of the point.
+The constraint of building it in Rust low-level,no garbage collector,brutal about memory safety forced every design decision to be intentional.That tension is part of the point.
 
 
 
@@ -147,4 +151,4 @@ The constraint of building it in Rust low-level, no garbage collector, brutal ab
 
 
 
-Built in Rust. Runs in your terminal. Thinks on its own.
+Built in Rust.Runs in your terminal.Thinks on its own.
